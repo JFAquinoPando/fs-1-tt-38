@@ -1,0 +1,163 @@
+.usuario-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  animation: slideIn 0.4s ease-out;
+}
+
+.usuario-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.usuario-info {
+  padding: 20px;
+}
+
+.usuario-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+
+.usuario-header h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.usuario-badge {
+  background: #667eea;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.usuario-detalles {
+  margin: 15px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+}
+
+.usuario-detalles p {
+  margin: 8px 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.usuario-detalles strong {
+  color: #333;
+}
+
+.botones-accion {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.botones-accion .btn {
+  flex: 1;
+  justify-content: center;
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+.btn-editar {
+  background: #667eea;
+  color: white;
+}
+
+.btn-editar:hover {
+  background: #5568d3;
+}
+
+.btn-eliminar {
+  background: #ff6b6b;
+  color: white;
+}
+
+.btn-eliminar:hover {
+  background: #ee5a52;
+}
+
+/* Estilos de edición */
+.formulario-edicion {
+  padding: 20px;
+  background: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input-edit {
+  padding: 10px 12px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.input-edit:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.botones-edicion {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-guardar {
+  background: #51cf66;
+  color: white;
+  flex: 1;
+  justify-content: center;
+}
+
+.btn-guardar:hover {
+  background: #40c057;
+}
+
+.btn-cancelar {
+  background: #adb5bd;
+  color: white;
+  flex: 1;
+  justify-content: center;
+}
+
+.btn-cancelar:hover {
+  background: #9ca3af;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .usuario-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .botones-accion {
+    flex-direction: column;
+  }
+}
